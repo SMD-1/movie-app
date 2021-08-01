@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  background: #191b30;
+}
+.movie {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.movie:hover .overview {
+  transform: translateX(0%);
+  cursor: pointer;
+}
+.movie-info {
+  font-family: "Changa", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 5px 10px;
+  color: #fff;
+}
+.movie-info .rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px 0 15px;
+}
+.star {
+  margin: 0 0 0 5px;
+}
+.movie img {
+  outline: none;
+  max-width: 100%;
+  border-radius: 10px;
+}
+#movie-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 1200px) {
+  #movie-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  /* .overview {
+    font-size: 70%;
+  } */
+  #movie-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  #movie-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  #movie-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.overview {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+  transform: translateX(100%);
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 95%;
+}
