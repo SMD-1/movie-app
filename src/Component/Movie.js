@@ -4,7 +4,7 @@ import Overview from "./Overview";
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-const Movie = ({ title, poster_path, overview, vote_average }) => {
+const Movie = ({ title, poster_path, name, overview, vote_average }) => {
   return (
     <div className="movie">
       <div className="movie-image">
@@ -12,7 +12,7 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
       </div>
       <div className="movie-info">
         <div className="name">
-          <h3>{title}</h3>
+          <h3>{title || name}</h3>
         </div>
         <div className="rating">
           <h3>{vote_average}</h3>

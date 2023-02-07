@@ -4,7 +4,7 @@ import "./App.css";
 import { FaGithub } from "react-icons/fa";
 
 const FEATURED_API =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=2d248459fa33105bff866bf17b092b83&page=1";
+  "https://api.themoviedb.org/3/trending/all/week?api_key=2d248459fa33105bff866bf17b092b83";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
